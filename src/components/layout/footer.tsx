@@ -35,19 +35,43 @@ export function Footer() {
             <h3 className="font-semibold text-gray-900 dark:text-gray-50 mb-4">Rychlé odkazy</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm">
+                <button 
+                  onClick={() => {
+                    const element = document.querySelector('#services');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm text-left"
+                >
                   Služby
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/team" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm">
-                  Tým
-                </Link>
+                <button 
+                  onClick={() => {
+                    const element = document.querySelector('#about');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm text-left"
+                >
+                  O nás
+                </button>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm">
+                <button 
+                  onClick={() => {
+                    const element = document.querySelector('#contact');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-50 transition-colors text-sm text-left"
+                >
                   Kontakt
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

@@ -70,7 +70,12 @@ export function Hero() {
             <MorphismButton
               variant="primary"
               size="lg"
-              onClick={() => window.location.href = '/services'}
+              onClick={() => {
+                const element = document.querySelector('#services');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="group"
             >
               Naše služby
@@ -80,7 +85,12 @@ export function Hero() {
             <MorphismButton
               variant="secondary"
               size="lg"
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => {
+                const element = document.querySelector('#contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Kontaktujte nás
             </MorphismButton>

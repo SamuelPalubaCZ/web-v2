@@ -10,11 +10,21 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
   const navigation = [
-    { name: "Domů", href: "/" },
-    { name: "Služby", href: "/services" },
-    { name: "Tým", href: "/team" },
-    { name: "Kontakt", href: "/contact" },
+    { name: "Domů", href: "#home" },
+    { name: "O nás", href: "#about" },
+    { name: "Služby", href: "#services" },
+    { name: "Kontakt", href: "#contact" },
   ];
 
   return (
@@ -42,13 +52,13 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-sm font-medium text-gray-900 dark:text-gray-50/80 hover:text-gray-900 dark:text-gray-50 transition-colors"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -84,14 +94,13 @@ export function Header() {
           <div className="md:hidden border-t border-gray-200/40 dark:border-gray-800/40 py-4">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <Link
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-sm font-medium text-gray-900 dark:text-gray-50/80 hover:text-gray-900 dark:text-gray-50 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-sm font-medium text-gray-900 dark:text-gray-50/80 hover:text-gray-900 dark:text-gray-50 transition-colors text-left"
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
             </nav>
           </div>
