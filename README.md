@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ThinkHome Web v2
 
-## Getting Started
+Moderní webová aplikace pro ThinkHome s ThinkPad barevným schématem a morphism designem.
 
-First, run the development server:
+## Funkce
 
+- 🎨 **ThinkPad barevné schéma** - Elegantní černé, šedé a stříbrné barvy inspirované ThinkPad notebooky
+- ✨ **Morphism design** - Skleněné efekty a moderní UI s backdrop blur
+- 📱 **Responzivní design** - Optimalizováno pro všechna zařízení
+- 🌙 **Dark/Light mode** - Automatické přepínání témat
+- ⚡ **Next.js 15** - Nejnovější verze s Turbopack
+- 🎯 **TypeScript** - Plná type safety
+- 🎭 **Framer Motion** - Plynulé animace
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 🔧 **@tabler/icons-react** - Moderní ikony
+
+## Stránky
+
+- **Domů** - Hlavní stránka s hero sekcí a misí
+- **Služby** - Detailní přehled všech IT služeb
+- **Tým** - Seznam členů týmu s kontakty
+- **Kontakt** - Kontaktní informace s možností kopírování
+
+## Instalace
+
+1. Nainstalujte závislosti:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Spusťte vývojový server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Otevřete [http://localhost:3000](http://localhost:3000) v prohlížeči
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build pro produkci
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Struktura projektu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── globals.css     # Globální styly
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Hlavní stránka
+│   ├── services/       # Stránka služeb
+│   ├── team/           # Stránka týmu
+│   └── contact/        # Kontaktní stránka
+├── components/         # React komponenty
+│   ├── layout/         # Layout komponenty
+│   └── sections/       # Sekce stránek
+└── public/            # Statické soubory
+    ├── logo/          # Loga
+    └── team/          # Týmové fotky
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologie
 
-## Deploy on Vercel
+- **Next.js 15** - React framework
+- **React 19** - UI knihovna
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animace
+- **@tabler/icons-react** - Ikony
+- **next-themes** - Theme management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Barvy
+- **ThinkPad Black**: `#1a1a1a`
+- **ThinkPad Dark**: `#2d2d2d`
+- **ThinkPad Gray**: `#4a4a4a`
+- **ThinkPad Light**: `#6b6b6b`
+- **ThinkPad Silver**: `#a8a8a8`
+
+### Morphism efekty
+- Skleněné pozadí s backdrop blur
+- Jemné stíny a ohraničení
+- Plynulé přechody a animace
+
+## Vývoj
+
+Pro vývoj doporučujeme používat VS Code s rozšířeními:
+- ES7+ React/Redux/React-Native snippets
+- Tailwind CSS IntelliSense
+- TypeScript Importer

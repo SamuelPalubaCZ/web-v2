@@ -1,17 +1,25 @@
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
-import { Hero } from '@/components/blocks/hero';
-import { Showcase } from '@/components/blocks/showcase';
+import { Hero } from "@/components/sections/hero";
+import { MissionGoals } from "@/components/sections/mission-goals";
+import { Features } from "@/components/sections/features";
+import { Stats } from "@/components/sections/stats";
+import { Process } from "@/components/sections/process";
+import { Pricing } from "@/components/sections/pricing";
+import { Metrics } from "@/components/sections/metrics";
+import { Timeline } from "@/components/sections/timeline";
+import { Testimonials } from "@/components/sections/testimonials";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5">
-      <Header />
-      <main>
-        <Hero />
-        <Showcase />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <MissionGoals />
+      <Features />
+      <Stats />
+      <Process />
+      <Pricing />
+      <Metrics />
+      <Timeline />
+      <Testimonials />
+    </>
   );
 }
